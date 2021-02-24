@@ -33,6 +33,7 @@
 #include <algorithm>
 
 #include "matrix_math.cuh"
+#include "softmax.cuh"
 #include "nv_wavenet_util.cuh"
 #include "nv_wavenet_conversions.cuh"
 
