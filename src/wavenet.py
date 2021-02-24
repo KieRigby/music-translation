@@ -166,7 +166,7 @@ class WaveNet(nn.Module):
         return Wdilated, Bdilated, Wres, Bres, Wskip, Bskip
 
     def export_embed_weights(self):
-        inp = torch.range(0, 255) / 255 - 0.5
+        inp = torch.arange(0, 256) / 255 - 0.5
         prev = self.first_conv.weight[:, :, 0].cpu().contiguous()
         prev = inp.unsqueeze(1) @ prev.transpose(0, 1)
         prev = prev + self.first_conv.bias.cpu() / 2
