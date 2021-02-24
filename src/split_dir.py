@@ -35,7 +35,7 @@ def split(input_path: Path, output_path: Path, train_ratio, val_ratio, filetype)
 
     n_train = int(len(input_files) * train_ratio)
     n_val = int(len(input_files) * val_ratio)
-    if n_val == 0:
+    if n_val < 0:
         n_val = 1
     n_test = len(input_files) - n_train - n_val
 
