@@ -105,3 +105,6 @@ notebooks/.build_dir/
 src/.build_dir/
 .build_dir
 musicnet/
+
+# user additions
+test_audio/
